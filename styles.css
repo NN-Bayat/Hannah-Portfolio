@@ -12,7 +12,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 35px 12%;
+    padding: 1.5% 12%;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     display: flex;
@@ -40,7 +40,7 @@ span {
 }
 
 .navbar a {
-    font-size: 18px;
+    font-size: 17px;
     color: white;
     font-weight: 500;
     margin: 0 20px;
@@ -56,7 +56,7 @@ span {
 }
 
 .contact {
-    padding: 10px 28px;
+    padding: 0.6% 1%;
     background-color: white;
     color: black;
     border: 2px solid transparent;
@@ -83,7 +83,8 @@ span {
 }
 
 .home-content {
-    max-width: 800px;
+    max-width: 100%;
+    margin-top: 5%;
 }
 
 .home-content h3 {
@@ -98,16 +99,17 @@ span {
 .home-content p {
     font-size: 18px;
     margin: 25px 0 30px;
+    letter-spacing: 0.1px;
 }
 
 .btn-box {
-    width: 345px;
+    width: auto;
     display: flex;
     gap: 2em;
 }
 
 .btn-1 {
-    padding: 10px 28px;
+    padding: 1.3% 25px;
     background-color: black;
     color: white;
     border: 2px solid transparent;
@@ -128,7 +130,7 @@ span {
 
 
 .btn-2 {
-    padding: 15px 28px;
+    padding: 1.3% 25px;
     background-color: orangered;
     color: white;
     border: 2px solid black;
@@ -147,12 +149,13 @@ span {
 
 .img-box img {
     border-radius: 50%;
-    width: 550px;
+    width: 400px;
+    margin-top: 15%;
 }
 
 /* --------------------------------------------------- */
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -170,17 +173,18 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 12% 8%;
+    padding: 10% 8%;
     gap: 10em;
     background-color: black;
 }
 
 .about-img img {
     position: relative;
-    width: 550px;
-    box-shadow: 0 0 25 orangered 0 0 50px orangered;
+    width: 400px;
+    box-shadow: 0 0 25px orangered, 0 0 50px orangered;
     border-radius: 50%;
 }
+
 
 .about-content h2 {
     text-align: left;
@@ -199,9 +203,11 @@ span {
     font-size: 20px;
 }
 
-.contact-form h2 {
+/* ----------------------------------- */
+
+.contact-form #heading {
     text-align: center;
-    margin-top: 3em;
+    padding-top: 3em;
     margin-bottom: 1em;
     font-size: 36px;
 }
@@ -232,27 +238,226 @@ span {
     resize: none;
 }
 
-.footer{
+.footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    padding: 40px 0;
+    padding: 40px 0 1%;
     background-color: black;
 }
 
-.footer .social{
+.footer .social {
     text-align: center;
     padding-bottom: 25px;
     color: white;
 }
 
-.footer .social a{
+.footer .social a {
     font-size: 24px;
     color: white;
     border: 2px solid orangered;
     height: 40px;
+    width: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px orangered,
+        0 0 10px orangered;
+    transition: 0.3s ease;
+}
+
+.footer .social a:hover {
+    transform: scale(1.2)translateY(-10px);
+    color: orangered;
+    border: 2px solid orangered;
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a {
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.footer ul li a:hover {
+    border-bottom: 3px solid orangered;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer .copyright {
+    color: white;
+    margin-top: 2%;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* -----------480PX---STYLES---------- */
+/* -----------480PX---STYLES---------- */
+
+@media (max-width: 480px) {
+
+    .home {
+        flex-direction: column-reverse;
+        gap: 1rem;
+        padding: 30% 8% 0;
+    }
+
+    .home-content {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .home-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .home-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-content p {
+        margin: 1rem 0 2rem;
+        text-align: center;
+    }
+
+    .btn-box {
+        width: auto;
+        display: flex;
+        gap: 1rem;
+        padding-bottom: 10%;
+    }
+
+    .img-box img {
+        width: 350px;
+        margin-top: 0;
+    }
+
+    /* --------------------------------------------------- */
+
+    .about {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 25% 3%;
+        gap: 4em;
+    }
+
+    .about-img img {
+        width: 300px;
+    }
+
+    .about-content h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 1.6em;
+    }
+
+    .about-content h3 {
+        font-size: 2.2em;
+    }
+
+    .about-content p {
+        margin: 1em 3% 2em;
+        letter-spacing: 0.8px;
+    }
+
+    /* ----------------------------------- */
+
+    .contact-form #heading {
+        padding-top: 1.5em;
+        margin-bottom: 0;
+        font-size: 2rem;
+    }
+
+    .contact-form form {
+        max-width: 100%;
+        padding: 0.3rem;
+        margin: 1rem auto 3rem;
+    }
+
+    .contact-form form .input-box input,
+    .contact-form form textarea {
+        padding: 0.8em;
+        border-radius: 0.5rem;
+        margin: 15px 0;
+    }
+
+    .contact-form form textarea{
+        height: 10rem;
+        margin-bottom: 1.5em;
+    }
+
+    .footer {
+        padding: 40px 0 5%;
+    }
+
+    .footer .social {
+        padding-bottom: 1.5rem;
+    }
+
+    .footer ul li {
+        padding: 0 0.5rem;
+    }
+
+    .footer .copyright {
+        margin-top: 5%;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+
+
+
 }
 
 
+/* barger code
 
+/* Mobile-specific styling */
+/* .navbar {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active {
+    display: flex;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fb2323;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+    }
+}  */
 
