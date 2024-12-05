@@ -7,6 +7,9 @@
     <title>hannah</title>
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -21,7 +24,9 @@
             <a href="#">Education</a>
         </nav>
 
-        <a href="#" class="contact">Contact Me</a>
+        <a href="#" class="hamburger"><i class="fa-solid fa-bars"></i></a>
+
+        <a href="#heading" class="contact">Contact Me</a>
     </header>
 
     <section class="home">
@@ -54,7 +59,7 @@
         </div>
 
         <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
+            <h2>About <span>Me</span></h2>
             <h3>Frontend <span>Developer</span></h3>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -68,7 +73,7 @@
     </section>
 
     <section class="contact-form">
-        <h2 class="contact-me">Contact <span>Me</span></h2>
+        <h2 id="heading">Contact <span>Me</span></h2>
 
         <form action="#">
             <div class="input-box">
@@ -81,8 +86,7 @@
                 <input type="text" placeholder="Subject">
             </div>
 
-            <textarea name="" id="" cols="30" rows="10" 
-            placeholder="Your Message"></textarea>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
 
             <input type="submit" value="Send Message" class="btn-1">
         </form>
@@ -106,6 +110,33 @@
 
         <p class="copyright">&copy; 2024 Hannah | All R ights Reserved</p>
     </footer>
+
+
+
+
+
+<!-- 
+    <script>
+        // Select the required elements
+        const hamburger = document.querySelector('.hamburger');
+        const navbar = document.querySelector('.navbar');
+
+        // Toggle the visibility of the navbar when the hamburger is clicked
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        // Close the navbar when a link is clicked (optional for smoother user experience)
+        const navLinks = document.querySelectorAll('.navbar a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+            });
+        });
+
+    </script>
+     -->
+    
 </body>
 
 </html>
