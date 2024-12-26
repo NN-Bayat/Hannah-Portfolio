@@ -16,20 +16,20 @@
     <header class="header">
         <a href="#" class="logo"><span>Han</span>nah</a>
 
-        <nav class="navbar">
-            <a href="#" class="active">Portfolio</a>
+        <nav class="navbar" id="nav-link">
+            <a href="#"class="active">Portfolio</a>
             <a href="#">Services</a>
             <a href="#">Experience</a>
             <a href="#">Projects</a>
             <a href="#">Education</a>
         </nav>
 
-        <a href="#" class="hamburger"><i class="fa-solid fa-bars"></i></a>
-
         <a href="#heading" class="contact">Contact Me</a>
+
+        <a href="#" class="menu_btn" id="menu-btn"><i class="fa-solid fa-bars"></i></a>
     </header>
 
-    <section class="home">
+    <section class="home section_container">
         <div class="home-content">
             <h3>Hi</h3>
 
@@ -53,8 +53,7 @@
     </section>
 
     <section class="about">
-
-        <div class="about-img">
+        <div class="about-img section_container">
             <img src="images/hero-image.jpg" alt="">
         </div>
 
@@ -86,13 +85,13 @@
                 <input type="text" placeholder="Subject">
             </div>
 
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <textarea name="" id="" cols="30" rows="5" placeholder="Your Message"></textarea>
 
             <input type="submit" value="Send Message" class="btn-1">
         </form>
     </section>
-    <footer class="footer">
 
+    <footer class="footer">
         <div class="social">
             <a href="#"><i class='bx bxl-facebook-circle'></i></a>
             <a href="#"><i class='bx bxl-linkedin-square'></i></a>
@@ -115,28 +114,24 @@
 
 
 
-<!-- 
+
     <script>
-        // Select the required elements
-        const hamburger = document.querySelector('.hamburger');
-        const navbar = document.querySelector('.navbar');
 
-        // Toggle the visibility of the navbar when the hamburger is clicked
-        hamburger.addEventListener('click', () => {
-            navbar.classList.toggle('active');
+        const menuBtn = document.getElementById("menu-btn");
+        const navLink = document.getElementById("nav-link");
+        const menuX = menuBtn.querySelector("i")
+
+        menuBtn.addEventListener("click", (e) => {
+            navLink.classList.toggle("open");
         });
 
-        // Close the navbar when a link is clicked (optional for smoother user experience)
-        const navLinks = document.querySelectorAll('.navbar a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navbar.classList.remove('active');
-            });
-        });
+        navLink.addEventListener("click", (e) => {
+            navLink.classList.remove("open");
+        })
 
     </script>
-     -->
-    
+
+
 </body>
 
 </html>
